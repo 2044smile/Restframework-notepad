@@ -6,7 +6,8 @@ class BbsSerializer(serializers.ModelSerializer):
     # Serializer 직렬화, 메모리상에 있는 변수와 값의 세트를 json 데이터로 변환해서 사용할 수 있게 된다.
 
     class Meta:
-        fields = ['id', 'title', 'author', 'pw', 'content']
+        model = Bbs
+        fields = ('id', 'title', 'author', 'pw', 'content')
 
     # instance를 반환한다.
     def create(self, validated_data):
