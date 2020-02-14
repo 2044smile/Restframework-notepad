@@ -1,3 +1,9 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def bbs_list(self):
+    pass
+
+
+def bbs_detail(self):
+    pass
