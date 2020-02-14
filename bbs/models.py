@@ -1,0 +1,12 @@
+from django.db import models
+
+
+class Bbs(models.Model):
+    created = models.DateTimeField(auto_now_add=True)
+    title = models.CharField(max_length=128, blank=True, default='')
+    author = models.CharField(max_length=20, blank=True, default='')
+    pw = models.CharField(max_length=12, blank=True, default='')
+    content = models.TextField()
+
+    class Meta:
+        ordering = ('created',)
